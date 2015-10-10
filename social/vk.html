@@ -20,9 +20,15 @@
         }
     }
 
-    __zw.push(["providerId", params.id], ["published", true], ["devAppSercerUrl", "//localhost/zapros_widget/"], ["devResourcePath", "//localhost/zapros_static/"], ["productionResourcePath", "//static.zapros.by"], ["productionAppServerUrl", "//w.zapros.by/"]);    
+    __zw.push(["providerId", params.id], ["published", true], ["devAppSercerUrl", "//localhost/zapros_widget/"], ["devResourcePath", "//localhost/zapros_static/"], ["productionResourcePath", "//static.zapros.by"], ["productionAppServerUrl", "//w.zapros.by/"]); 
+    (function() {
+        var a = document.createElement("script");
+        a.type = "text/javascript";
+        a.async = !0;
+        a.src = "wLoader.min.js";
+        (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(a)
+    })();   
     </script>
-    <script type="text/javascript" async="" src="wLoader.min.js"></script>
     <script type="text/javascript">
     window.onload = function() {
         window.zs.LoadStep({
