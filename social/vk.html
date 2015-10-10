@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zapros app vk</title>
+    <script type="text/javascript">
+    var tmp = new Array();
+    var tmp2 = new Array();
+    var params = {};
+    var __zw = __zw || [];
+
+    var get = location.search;
+    if (get != '') {
+        tmp = (get.substr(1)).split('&');
+        for (var i = 0; i < tmp.length; i++) {
+            tmp2 = tmp[i].split('=');
+            params[tmp2[0]] = tmp2[1];
+        }
+    }
+
+    __zw.push(["providerId", params.id], ["published", true], ["devAppSercerUrl", "//localhost/zapros_widget/"], ["devResourcePath", "//localhost/zapros_static/"], ["productionResourcePath", "//static.zapros.by"], ["productionAppServerUrl", "//w.zapros.by/"]);
+    (function() {
+        var a = document.createElement("script");
+        a.type = "text/javascript";
+        a.async = !0;
+        a.src = "http://static.zapros.by/Scripts/widget/wLoader.min.js";
+        (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(a)
+    })();
+    </script>
+    <script type="text/javascript">
+    window.onload = function() {
+        window.zs.LoadStep({
+            stepNumber: 1,
+            providerId: params.id,
+            serviceId: 0,
+            resourceId: 0,
+            selectedTime: 0,
+            dayId: 635787990765500000
+        })
+    }
+    </script>
+    <link id="//static.zapros.by/Content/widget.css" rel="stylesheet" type="text/css" href="vk.css" media="all">
+</head>
+
+<body>
+    
+</body>
+
+</html>
